@@ -1,0 +1,228 @@
+﻿@font-face {
+    font-family: "Karla";
+    src: url("attachments/fonts/Karla-VariableFont_wght.ttf") format("truetype"), url("attachments/fonts/static/Karla-Regular.ttf") format("truetype"), url("attachments/fonts/static/Karla-Bold.ttf") format("truetype"), url("attachments/fonts/Karla-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+}
+:root {
+    --Green-lighter-200: hsl(148, 38%, 91%);
+    --Green-medium-600: hsl(169, 82%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --Grey-medium-500: hsl(186, 15%, 59%);
+    --Grey-darker-900: hsl(187, 24%, 22%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    background-color: var(--Green-lighter-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 5rem;
+    gap: 2rem;
+}
+
+.form-box {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 20px 28px;
+    max-width: 550px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--Grey-darker-900);
+    margin-bottom: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+form label {
+    font-size: 16px;
+    color: var(--Grey-darker-900);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey-medium-500);
+    font-size: 1rem;
+    border-color: var(--Green-medium-600);
+    cursor: pointer;
+}
+
+input[type="text"]:focus-visible
+input[type="email"]:focus-visible,
+textarea:focus-visible {
+    border-color: var(--Green-medium-600);
+}
+
+.email {
+    grid-column: span 2;
+    width: 100%;
+}
+
+textarea {
+    grid-column: span 2;
+    height: 100px;
+    resize: horizontal;
+    border-color: var(--Green-medium-600);
+}
+
+
+.msg-txt1 {
+    display: none;
+    color: hsl(0, 66%, 54%);
+    grid-column: span 2;
+}
+
+.selector {
+    color: hsl(187, 24%, 22%);
+    border-color: var(--Green-medium-600);
+    flex:1;
+}
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+.query-txt {
+    grid-column: span 2;
+    font-size: 16px;
+    color: var(--Grey-darker-900);
+}
+
+.selector label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    border: 1px solid var(--Green-medium-600);
+    border-radius: 8px;
+    width: 100%; 
+    height: 50px; 
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Message-container {
+    grid-column: span 2;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--Green-medium-600);
+    border: 1px solid var(--Grey-medium-500);
+    cursor: pointer;
+}
+
+label.consent {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--Grey-darker-900)
+}
+
+button {
+    grid-column: span 2;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--Green-medium-600);
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--Grey-darker-900);
+}
+
+.msg-container {
+    display: none;
+    justify-self: start;
+    flex-direction: column;
+    background-color: var(--Grey-darker-900);
+    margin-top: 0.5rem;
+    padding: 25px 15px;
+    border-radius: 8px;
+    gap: 5px;
+    box-shadow: 0px 4px 8px rgba(20, 55, 63, 0.4);
+}
+
+#msg-txt1,
+#msg-txt2 {
+    display: inline;
+    color: var(--white);
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .radio-group {
+        flex-direction: column;
+        gap: 0.5rem; 
+        width: 100%;
+    }
+
+    .msg-container {
+        justify-self: start;
+        align-items: self-start;
+        padding: 5px;
+        gap: 2px;
+    }
+}
+.attribution {
+    padding-top: 3px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

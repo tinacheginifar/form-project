@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./attachments/logo/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script defer src="./assets/js/app.js"></script>
+
+
+    <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+    <div class="container">
+        <div id="msg" class="msg-container">
+            <div class="successMessage">
+                <img src="/attachments/icons/icon-success-check.svg" alt="success">
+                <p id="msg-txt1">Message Sent! </p>
+            </div>
+            <div class="successMessage">
+                <p id="msg-txt2">Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+        </div>
+
+        <div class="form-box">
+            <header>
+                <h1>
+                    Contact Us
+                </h1>
+            </header>
+            <main>
+                <form action="submit" class="contact-us">
+                    <div>
+                        <label for="firstName">
+                            First Name <span>*</span>
+                            <input type="text" id="firstName" name="firstName" />
+                        </label>
+                        <p class="firstNameError"></p>
+                    </div>
+                    <div>
+                        <label for="lastName">
+                            Last Name <span>*</span>
+                            <input type="text" id="lastName" name="lastName" />
+                        </label>
+                        <p class="lastNameError"></p>
+                    </div>
+
+                    <div class="email">
+                        <label for="email">
+                            Email Address <span>*</span>
+                            <input type="email" id="email" name="email" />
+                        </label>
+                        <p class="emailError"></p>
+                    </div>
+                    <label class="query-txt">
+                        Query Type <span>*</span>
+                    </label>
+                        <div class="radio-group">
+                            <div class="selector">
+                                <label for="generalEnquiry">
+                                    <input type="radio" id="generalEnquiry" name="queryType" value="general" />
+                                    General Enquiry
+                                </label>
+                            </div>
+                            <div class="selector">
+                                <label for="supportRequest">
+                                    <input type="radio" id="supportRequest" name="queryType" value="support" />
+                                    Support Request
+                                </label>
+                            </div>
+                        </div>
+                        <p class="queryTypeError"></p>
+                    
+
+                    <div class="Message-container">
+                        <label for="message">
+                            Message <span>*</span>
+                            <textarea id="message" name="message"></textarea>
+                        </label>
+                        <p class="textAreaError"></p>
+                    </div>
+
+                    <label for="consent" class="consent">
+                        <input type="checkbox" id="consent" name="consent" /> I here by
+                        consent to being contacted by the team <span>*</span>
+                    </label>
+                    <p class="consentError email"></p>
+
+                    <button type="submit" class="btn">Submit</button>
+                    <small id="error"></small>
+                </form>
+            </main>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+            Coded by <a href="#">tina</a>.
+        </div>
+    </footer>
+</body>
+</html>
